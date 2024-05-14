@@ -31,7 +31,7 @@ public class AttendanceController {
     }
 
     @GetMapping("/{date}")
-    public ResponseEntity<List<AtCrtendanceDto>> fetchAttendance(@PathVariable String date) throws ParseException {
+    public ResponseEntity<List<AttendanceDto>> fetchAttendance(@PathVariable String date) throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date day = format.parse(date);
         return new ResponseEntity<List<AttendanceDto>>(
